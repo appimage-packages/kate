@@ -1,0 +1,2 @@
+# kate
+KDE Kate appimage
