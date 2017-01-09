@@ -1,4 +1,4 @@
-name: changeme
+name: kate
 packages:
   - build-essential
   - libgl1-mesa-dev
@@ -87,6 +87,7 @@ frameworks:
     - ki18n
     - kitemviews
     - kconfig
+    - polkit-qt-1
     - kauth
     - kcodecs
     - karchive
@@ -103,18 +104,23 @@ frameworks:
     - sonnet
     - ktextwidgets
     - kglobalaccel
+    - attica
     - kxmlgui
     - solid
     - kbookmarks
     - kjobwidgets
-    - kio
     - phonon
+    - phonon-gstreamer
     - knotifications
+    - gpgmepp
     - kwallet
-    - kparts
-    - kpty
+    - kio
+    - knewstuff
+    - breeze-icons
+    - kactivities
+    - plasma-framework
 type: git
-url: http://anongit.kde.org/changeme
+url: http://anongit.kde.org/kate
 buildsystem: cmake
 buildoptions: '-DCMAKE_INSTALL_PREFIX:PATH=/opt/usr -DKDE_INSTALL_SYSCONFDIR=/opt/etc -DBUILD_TESTING=OFF'
 dependencies:
