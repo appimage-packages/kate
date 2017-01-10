@@ -120,6 +120,8 @@ frameworks:
     - kactivities
     - kdeclarative
     - plasma-framework
+    - kparts
+    - ktexteditor
 type: git
 url: http://anongit.kde.org/kate
 buildsystem: cmake
