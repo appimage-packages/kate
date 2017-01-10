@@ -121,7 +121,7 @@ frameworks:
     - kdeclarative
     - plasma-framework
     - kparts
-    - syntaxhighlighting
+    - syntax-highlighting
     - ktexteditor
 type: git
 url: http://anongit.kde.org/kate
