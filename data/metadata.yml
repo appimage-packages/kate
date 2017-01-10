@@ -121,6 +121,7 @@ frameworks:
     - kdeclarative
     - plasma-framework
     - kparts
+    - syntaxhighlighting
     - ktexteditor
 type: git
 url: http://anongit.kde.org/kate
@@ -143,3 +144,11 @@ dependencies:
       source:
         type: git
         url: 'https://anongit.kde.org/polkit-qt-1.git'
+  - gpgme:
+      build:
+        buildsystem: make
+        buildoptions: ''
+      depname: gpgme
+      source:
+        type: git
+        url: 'git://git.gnupg.org/gpgme.git'
