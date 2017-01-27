@@ -47,7 +47,7 @@ cp -rfv /opt/usr/plugins/<%= name %> ./plugins || true
 #mkdir -p ./usr/lib/qml/
 mkdir -p ./usr/{share,bin,lib}
 mkdir ./etc
-rsync -aruxv --progress /opt/usr/plugins/kf5/ ./plugins/
+rsync -aruxv --progress /opt/usr/plugins/ ./plugins/
 rsync -aruxv --progress /opt/usr/share/ ./usr/share/
 rsync -aruxv --progress /opt/etc/ ./etc/
 rsync -aruxv --progress /opt/usr/qml/ ./qml
@@ -139,8 +139,10 @@ wget "https://github.com/probonopd/AppImageKit/releases/download/knowngood/appim
 chmod a+x appimagetool-x86_64.AppImage
 
 ARCH=$(arch)
-DATE=$(date +"%m%d%Y")
+DATE=$(date +"%Y%m%d")
 
 APPIMAGEFILENAME="<%= name %>-git$DATE-$ARCH.AppImage"
 
-./appimagetool-x86_64.AppImage /<%= name %>.AppDir /appimage/$APPIMAGEFILENAME
+./appimagetool-x86_64.AppImage -v -u "zsync|$APPIMAGEFILENAME" /<%= name %>.AppDir /appimage/$APPIMAGEFILENAME
+zsyncmake -o /appimage/$APPIMAGEFILENAME.zsync /appimage/$APPIMAGEFILENAME
+ls /appimage/
