@@ -46,6 +46,7 @@ frameworks:
     - kparts
     - syntax-highlighting
     - ktexteditor
+    - kdecoration
     - breeze
 type: git
 url: http://anongit.kde.org/kate
