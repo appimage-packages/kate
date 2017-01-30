@@ -45,10 +45,10 @@ node('linux') {
             sh 'bundle exec deploy.rb'
        }
        stage('Copy Artifacts') {
-          step([$class: 'S3BucketPublisher', consoleLogLevel: 'INFO', dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: 'ds9-apps', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, \
+          step([$class: 'S3BucketPublisher', consoleLogLevel: 'INFO', dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: "ds9-apps/${JOB_NAME}", excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, \
           managedArtifacts: false, noUploadOnFailure: true, selectedRegion: 'eu-central-1', showDirectlyInBrowser: true, \
           sourceFile: 'appimage/*.AppImage', storageClass: 'STANDARD', uploadFromSlave: true, useServerSideEncryption: false]], pluginFailureResultConstraint: 'UNSTABLE', profileName: 'ds9-apps', userMetadata: []])
-         step([$class: 'S3BucketPublisher', consoleLogLevel: 'INFO', dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: 'ds9-apps', excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, \
+         step([$class: 'S3BucketPublisher', consoleLogLevel: 'INFO', dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: "ds9-apps/${JOB_NAME}", excludedFile: '', flatten: false, gzipFiles: false, keepForever: false, \
          managedArtifacts: false, noUploadOnFailure: true, selectedRegion: 'eu-central-1', showDirectlyInBrowser: true, \
          sourceFile: 'appimage/*.zsync', storageClass: 'STANDARD', uploadFromSlave: true, useServerSideEncryption: false]], pluginFailureResultConstraint: 'UNSTABLE', profileName: 'ds9-apps', userMetadata: []])
        }
