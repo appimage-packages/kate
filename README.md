@@ -1,6 +1,6 @@
 # kate
-# jobname
-[![Build Status](http://aci.pangea.pub/job/kate-appimage/job/master/badge/icon)](http://aci.pangea.pub/job/kate-appimage/job/master/)
+Master branch:
+[![Build Status](http://aci.pangea.pub/job/kate-master-appimage/badge/icon)](http://aci.pangea.pub/job/kate-master-appimage/)
 
 AppImage for KDE kate
 
@@ -9,3 +9,7 @@ Kate is a multi-document, multi-view text editor by KDE. It features stuff like 
 
 Job homepage url
 https://kate-editor.org/
+
+S3 Download:
+master:
+https://s3-eu-central-1.amazonaws.com/ds9-apps/index.html#!/kate-master-appimage%2F
