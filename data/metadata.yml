@@ -1,4 +1,5 @@
 name: kate
+binary: kate
 packages:
   - build-essential
 frameworks:
